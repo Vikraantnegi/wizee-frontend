@@ -1,0 +1,12 @@
+body {
+  font-family: 'Poppins', sans-serif !important;
+  letter-spacing: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

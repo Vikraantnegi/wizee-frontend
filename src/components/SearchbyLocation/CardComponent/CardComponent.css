@@ -1,0 +1,81 @@
+#card-section{
+    max-width: 1200px;
+    margin: auto;
+    flex: 1;
+}
+#card-section .location-card{
+    margin: 40px 70px;
+    padding: 50px;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/Khajjiar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 50px;
+    height: 500px;
+    width: '100%';
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.5);
+}
+#card-section .weather{
+    display: flex;
+    flex-direction: column;
+}
+#card-section .roww{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#card-section .details{
+    display: flex;
+    min-width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+#card-section .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff9900;
+    min-width: 100px;
+    min-height: 100px;
+    position: relative;
+    left: -100px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: -5px 10px 20px 0px rgba(0,0,0,0.5);
+}
+#card-section .box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: olive;
+    min-width: 100px;
+    min-height: 100px;
+    position: relative;
+    left: -80px;
+    bottom: 12px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: -5px 10px 20px 0px rgba(0,0,0,0.5);
+}
+#card-section .types{
+    display: flex;
+    align-items: center;
+    min-width: 50px;
+    justify-content: space-between;
+}
+#card-section .weather, .details{
+    color: white;
+}
+#card-section .group{
+    display: flex;
+    flex-direction: row;
+}
+
+

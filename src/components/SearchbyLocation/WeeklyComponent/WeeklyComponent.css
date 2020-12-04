@@ -1,0 +1,16 @@
+#weekly-section{
+    max-width: 1200px;
+    margin: auto;
+    flex: 1;
+}
+.weather-cards{
+    margin: 40px;
+    padding-top: 20px;
+    height: auto;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

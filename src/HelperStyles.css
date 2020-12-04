@@ -1,0 +1,88 @@
+.splash{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://i.pinimg.com/originals/2e/3a/28/2e3a28999fbd517d0f36241ac5a236d2.jpg');
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.inner-container-splash{  
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.searchbylocation .banner{
+    background-color: rgba(103,84,226,1);
+    height: 400px;
+}
+.searchbyweather .banner{
+    background-color: rgba(103,84,226,1);
+    height: 400px;
+}
+.searchbylocation .banner .content, .searchbyweather .banner .content{
+    max-width: 1100px;
+    min-height: 400px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchbylocation .banner .content .desc, .searchbyweather .banner .content .desc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 700px;
+}
+.searchbylocation .banner .content .desc .bor:hover, .searchbyweather .banner .content .desc .bor:hover{
+    border: 1px solid white !important;
+}
+.backgroundimageee{
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./assets/images/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Flexrow{
+    display: flex;
+    flex-direction: row;
+}
+.Flexcolumn{
+    display: flex;
+    flex-direction: column;
+}
+.Flexbetween{
+    justify-content: space-between;
+}
+.Flexcenter{
+    justify-content: center;
+}
+.Flexaround{
+    justify-content: space-around;
+}
+.FlexAligncenter{
+    align-items: center;
+}
+.mw1100{
+    max-width: 1100px;
+    margin: 60px auto;
+}
+.p10{padding: 10px}
+.mr20{margin-right: 20px;}
+.mv20{margin: 20px 0;}
+.responsive-iframe {
+    bottom: 0;
+    right: unset;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    border: none;
+}

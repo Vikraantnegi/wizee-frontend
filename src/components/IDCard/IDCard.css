@@ -1,0 +1,26 @@
+.image-round{
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px grey;
+    margin: 1em 1em;
+    width: 400px;
+    transition: all .2s ease-in-out;
+}
+.image-round:hover{
+    transform: scale(1.2);
+}
+.irleft{
+    padding: 1.5em 2em;
+}
+.irleft img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.irright{
+    padding: 1.5em 1em;
+}

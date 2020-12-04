@@ -1,0 +1,32 @@
+#daily-feed{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+#daily-feed .Flexrow{
+    display: flex;
+    flex-direction: row;
+}
+#daily-feed .Flexcolumn{
+    display: flex;
+    flex-direction: column;
+}
+#daily-feed .borderbox{
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+#daily-feed .p20{
+    padding: 20px;
+}
+#daily-feed .FlexCenter{
+    align-items: center;
+}
+#daily-feed .FlexBetween{
+    justify-content: space-between;
+}
+#daily-feed .Flexend{
+    justify-content: flex-end;
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.2); }

@@ -1,0 +1,47 @@
+#services-section{
+    padding: 60px 0;
+    background-color: #f9f9fc;
+}
+#tab-container{
+    max-width: 1200px;
+    margin: auto;
+}
+.tab-heading{
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 30px;
+    color: black;
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+}
+.tabview{
+    border: none;
+    margin-bottom: 20px;
+}
+.nav .nav-item:first-child{
+    margin-left: 0px;
+}
+.nav .nav-item .nav-link{
+    color: rgba(0,0,0,0.8);
+    border: none;
+    padding: 10px 50px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.nav .nav-item .nav-link:hover{
+    color: rgba(103,84,226,1) !important;
+}
+.nav .nav-item .nav-link:first-child{
+    padding-left: 15px;
+}
+.nav-item .nav-link.active {
+    color: rgba(103,84,226,1) !important;
+    background-color: inherit !important;
+}
+.tab-content{
+    margin: 20px 0;
+}
+.mb_40{
+    margin-bottom: 40px;
+}

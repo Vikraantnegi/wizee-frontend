@@ -1,0 +1,42 @@
+#weather-section{
+    max-width: 1200px;
+    margin: 40px auto;
+    flex: 1;
+}
+#weather-section #button-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px
+}
+#weather-section #button-section button{
+    padding: 12px 40px;
+}
+#weather-section #button-section .btn-outline-primary, .btn-outline-secondary,
+    .btn-outline-success, .btn-outline-warning, .btn-outline-danger{
+    border-color: #6c5cff !important;
+    color : #6c5cff;
+    box-shadow: none;
+}
+#weather-section #button-section .btn-outline-primary:hover, .btn-outline-secondary:hover,
+    .btn-outline-success:hover, .btn-outline-warning:hover, .btn-outline-danger:hover{
+    background-color: #6c5cff !important;
+    color : white !important;
+    box-shadow: none;
+}
+#weather-section #button-section .btn-outline-primary:focus, .btn-outline-secondary:focus,
+    .btn-outline-success:focus, .btn-outline-warning:focus, .btn-outline-danger:focus{
+    background-color: #6c5cff !important;
+    color : white !important;
+    box-shadow: none;
+}
+#weather-section .Current-cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px;
+}
+#weather-section .forecast{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
