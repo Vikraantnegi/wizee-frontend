@@ -1,11 +1,20 @@
-import {React} from 'react';
+import {React, useEffect, useState} from 'react';
 import './Services.css';
 import { FiSearch } from "react-icons/fi";
 
 import Location from '../../assets/Illustrations/undraw_traveling_t8y2.svg';
 import Weather from '../../assets/Illustrations/undraw_weather_notification_4sbo.svg';
+import { setItem, getItem } from '../../utility/localStorageControl';
 
 function Services(){
+    const [idToken, setToken] = useState('');
+    
+    const navi = () => {
+        setItem('navigation', 'Hiii');
+    }
+    useEffect(() => {
+        setToken(getItem('idToken'));
+    }, []);
     return(
         <div id="services-section">
             <div id="tab-container">
@@ -34,7 +43,11 @@ function Services(){
                         <div class="d-flex">
                             <div class="col-lg-6" style={{flexDirection: "column"}}>
                                 <p class="mb_40">Have you ever wanted to travel to a place with a specific weather instead of a specific location? Have you ever searched for places with snowfall or places with rains? We provide you with a free to use service to do just this. Just type in a weather type you'd like to experience and we will suggest you the places where the weather is exactly how you want it to be. Try it for yourself now for a unique experience.</p>
-                                <a href="/search-by-weather" class="button"><FiSearch /> Search by Weather!</a>
+                                {idToken.length > 0 ? (
+                                    <a href="/search-by-weather" class="button"><FiSearch /> Search by Weather!</a>
+                                ) : (
+                                    <a href="/signup" class="button" onClick={() => navi()}><FiSearch /> Search by Weather!</a> 
+                                )}
                             </div>
                             <div class="col-lg-4 ml-auto" style={{marginTop: -60}}>
                                 <img class="illus" src={Weather} height="350" width="350" alt="Weather"/>

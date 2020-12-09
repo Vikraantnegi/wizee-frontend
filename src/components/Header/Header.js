@@ -1,8 +1,9 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import './Header.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Avatar from '@material-ui/core/Avatar';
 import splashlogo from '../../assets/images/favicon.png';
+import { setItem, getItem } from '../../utility/localStorageControl';
 
 function Header({name}){
     var width = window.innerWidth;    
@@ -12,6 +13,20 @@ function Header({name}){
     //         navitems[item].className = 'nav-link active';
     //     }
     // }
+    const [username, setname] = useState('');
+    const [idToken, setToken] = useState('');
+    const [picture, setimg] = useState('');
+
+    const navi = () => {
+        setItem('navigation', 'Hiii');
+    }
+
+    useEffect(() => {
+        setToken(getItem('idToken'));
+        setname(getItem('name'));
+        setimg(getItem('img'));
+    }, []);
+
     const [loggedin, setloggedin] = useState(false);
     return (
         <header className="header">
@@ -27,7 +42,11 @@ function Header({name}){
                             <a aria-haspopup="true" aria-expanded="true" id="dropdown-menu-align-right" href="/home#services-section" class="dropdown-toggle nav-link" role="button">Services</a>
                             <div aria-labelledby="dropdown-menu-align-right" class="dropdown-menu" style={{margin: 0}}>
                                 <a href="/search-by-location" class="dropdown-item">Search by Location</a>
-                                <a href="/search-by-weather" class="dropdown-item">Search by Weather</a>
+                                {idToken.length > 0 ? (
+                                    <a href="/search-by-weather" class="dropdown-item">Search by Weather</a>
+                                ) : (
+                                    <a href="/signup" class="dropdown-item" onClick={() => navi()}>Search by Weather</a>
+                                )}
                             </div>
                         </div>
                         <Nav.Link href="/home#news-section">News & Blogs</Nav.Link>
@@ -36,16 +55,16 @@ function Header({name}){
                         {(width >= 992) 
                         ? (
                             <div className="avatar">
-                                {loggedin 
+                                {idToken.length > 0 
                                 ? (
-                                    <Avatar alt="Remy Sharp" src="https://images.thestar.com/sMDiN2dNg6K6sLa_sG5o2Q4QIC4=/1086x1358/smart/filters:cb(1565189687545)/https://www.thestar.com/content/dam/thestar/news/gta/2019/08/06/man-reported-missing-from-downtown-medical-facility/hamidullah_mohammad_gul_28.jpg"/>
+                                    <Avatar alt="img" src={picture} />
                                 )
                                 : (
                                     <Avatar alt="" src=""/>
                                 )}
-                                {loggedin 
+                                {idToken.length > 0  
                                 ? (
-                                    <p className="avatar-name">Welcome<br/><p className="name">Remy!</p></p>
+                                    <p className="avatar-name">Welcome<br/><p className="name">{username}</p></p>
                                 )
                                 : (
                                     <a href="/signup" className="avatar-name"><p className="name">Sign In!</p></a>

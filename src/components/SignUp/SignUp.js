@@ -5,8 +5,11 @@ import CardContent from '@material-ui/core/CardContent';
 import firebase from 'firebase';
 import './SignUp.css';
 import { makeStyles } from '@material-ui/core/styles';
+import { setItem, getItem } from '../../utility/localStorageControl';
 
-var firebaseui = require('firebaseui');
+var firebaseui = require('firebaseui')
+
+const navigation = getItem('navigation');
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -19,24 +22,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 var firebaseConfig = {
-    apiKey: "AIzaSyAPUcCyrSsvtvgBw0pMDKUl4VcjrOL-hQY",
-    authDomain: "wizee-b4ded.firebaseapp.com",
-    databaseURL: "https://wizee-b4ded.firebaseio.com",
-    projectId: "wizee-b4ded",
-    storageBucket: "wizee-b4ded.appspot.com",
-    messagingSenderId: "1023424069575",
-    appId: "1:1023424069575:web:8a6c25b1c870270ade23e2",
-    measurementId: "G-DGMSP5SDVP"
-  };
+  apiKey: "AIzaSyCmRwQP1VbHax2JzBwB_do4nutHA5vBSyM",
+  authDomain: "wizee-b4ded.firebaseapp.com",
+  databaseURL: "https://wizee-b4ded.firebaseio.com",
+  projectId: "wizee-b4ded",
+  storageBucket: "wizee-b4ded.appspot.com",
+  messagingSenderId: "1023424069575",
+  appId: "1:1023424069575:web:63a6d72c451294c0de23e2",
+  measurementId: "G-BPH6XBWXB2"
+};
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 var uiConfig = {
     callbacks: {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-        // User successfully signed in.
-        // Return type determines whether we continue the redirect automatically
-        // or whether we leave that to developer to handle.
+        setItem('name', authResult.additionalUserInfo.profile.name);
+        setItem('img', authResult.additionalUserInfo.profile.picture);
+        setItem('idToken', authResult.credential.idToken);
         return true;
       },
       uiShown: function() {
@@ -46,7 +49,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: '/',
+    signInSuccessUrl: navigation === 'Hiii' ? '/search-by-weather' : '/home',
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
       firebase.auth.EmailAuthProvider.PROVIDER_ID,

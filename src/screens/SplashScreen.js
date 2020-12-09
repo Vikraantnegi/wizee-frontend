@@ -1,10 +1,14 @@
-import React from 'react';
+import {React, useEffect, useState} from 'react';
 import '../HelperStyles.css';
 import splashlogo from '../assets/images/logo2.png';
 import HeaderSplash from '../components/Header/Header-Splash/Header-Splash';
 import {Card, Button} from 'react-bootstrap';
+import { setItem, getItem } from '../utility/localStorageControl';
 
 function SplashScreen() {
+  useEffect(() => {
+    setItem('idToken', '');
+  })
   return (
     <div className="splash">
       <HeaderSplash />
