@@ -22,14 +22,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 var firebaseConfig = {
-  apiKey: "AIzaSyCmRwQP1VbHax2JzBwB_do4nutHA5vBSyM",
-  authDomain: "wizee-b4ded.firebaseapp.com",
-  databaseURL: "https://wizee-b4ded.firebaseio.com",
-  projectId: "wizee-b4ded",
-  storageBucket: "wizee-b4ded.appspot.com",
-  messagingSenderId: "1023424069575",
-  appId: "1:1023424069575:web:63a6d72c451294c0de23e2",
-  measurementId: "G-BPH6XBWXB2"
+  apiKey: "AIzaSyBd6JoX3J22YlU1_Sb2UwwIe4jyhc528_M",
+  authDomain: "wizee-d334b.firebaseapp.com",
+  databaseURL: "https://wizee-d334b.firebaseio.com",
+  projectId: "wizee-d334b",
+  storageBucket: "wizee-d334b.appspot.com",
+  messagingSenderId: "541217265152",
+  appId: "1:541217265152:web:4df368303996e0d2afaae5",
+  measurementId: "G-85ZBMC8VC5"
 };
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
